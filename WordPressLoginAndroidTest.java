@@ -15,7 +15,7 @@ public class WordPressLoginAndroidTest {
 	@Test
 	public void iCanSeeTheLoginErrorMessage() {
 		//define apk file location
-		File appDir = new File("/Users/Inexis/IdeaProjects/AppiumDemo/Apps");
+		File appDir = new File("/Users/MyPC/IdeaProjects/AppiumDemo/Apps");
         	File app = new File(appDir, "org.wordpress.android-5.6-APK4Fun.com.apk");
         	
 		//define capabilities
@@ -38,7 +38,7 @@ public class WordPressLoginAndroidTest {
 		AppiumDriver adrv = new AndroidDriver(seleniumGridUrl, capabilities);
 		adrv.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//perform the test steps
-		adrv.findElement(By.id("org.wordpress.android:id/nux_username")).sendKeys("myusername@email.com");
+		adrv.findElement(By.id("org.wordpress.android:id/nux_username")).sendKeys("myusername@gmail.com");
 		adrv.findElement(By.id("org.wordpress.android:id/nux_password")).sendKeys("password123");
 		adrv.findElement(By.id("org.wordpress.android:id/nux_sign_in_button")).click();
 		Assert.assertEquals(adrv.findElement(By.id("org.wordpress.android:id/nux_dialog_title")).getText(), "Sorry, We can't log you in");
