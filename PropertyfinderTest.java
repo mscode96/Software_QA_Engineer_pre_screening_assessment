@@ -31,18 +31,18 @@ public class PropertyfinderTest{
     public void UserTest() throws InterruptedException {
 
         driver.get(baseUrl + "/");
-        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[3]/div[2]/div/button")).click();
-        driver.findElement(By.cssSelector(".selected")).click();
-        driver.findElement(By.cssSelector(".typeahead.tt-input")).click();
-        driver.findElement(By.cssSelector(".typeahead.tt-input")).sendKeys("marina");
-        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[3]/div[1]/span/div/div/div[1]")).click();
-        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[4]/div/div[1]/div/button")).click();
-        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[4]/div/div[1]/div/div/ul/li[2]")).click();
-        driver.findElement(By.xpath(".//*[@id='price_group']/div[1]/div/button")).click();
-        driver.findElement(By.xpath("//div[@id='price_group']/div[1]/div/div/ul/li[2]")).click();
-        driver.findElement(By.cssSelector("#bedroom_group > div.pure-u-1-2 > div.ms-parent > button.ms-choice")).click();
-        driver.findElement(By.xpath("//div[@id='bedroom_group']/div/div/div/ul/li[4]")).click();
-        driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[3]/div[2]/div/button")).click(); //xpath can be defined using the mechanism //tagname[@attribute='value'] - relative path
+        driver.findElement(By.cssSelector(".selected")).click(); //cssselctor can be defined using the mechanism tagName[attributename=attributeValue]
+        driver.findElement(By.cssSelector(".typeahead.tt-input")).click(); //cssselctor can be defined using the mechanism tagName[attributename=attributeValue]
+        driver.findElement(By.cssSelector(".typeahead.tt-input")).sendKeys("marina"); //cssselctor can be defined using the mechanism tagName[attributename=attributeValue]
+        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[3]/div[1]/span/div/div/div[1]")).click(); //xpath can be defined using the mechanism //tagname[@attribute='value'] - relative path
+        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[4]/div/div[1]/div/button")).click(); //xpath can be defined using the mechanism //tagname[@attribute='value'] - relative path
+        driver.findElement(By.xpath(".//*[@id='search-form-property']/div[4]/div/div[1]/div/div/ul/li[2]")).click(); //xpath can be defined using the mechanism //tagname[@attribute='value'] - relative path
+        driver.findElement(By.xpath(".//*[@id='price_group']/div[1]/div/button")).click(); //xpath can be defined using the mechanism //tagname[@attribute='value'] - relative path
+        driver.findElement(By.xpath("//div[@id='price_group']/div[1]/div/div/ul/li[2]")).click(); //xpath can be defined using the mechanism //tagname[@attribute='value'] - relative path
+        driver.findElement(By.cssSelector("#bedroom_group > div.pure-u-1-2 > div.ms-parent > button.ms-choice")).click(); //cssselctor can be defined using the mechanism tagName[attributename=attributeValue]
+        driver.findElement(By.xpath("//div[@id='bedroom_group']/div/div/div/ul/li[4]")).click(); //xpath can be defined using the mechanism //tagname[@attribute='value'] - relative path
+        driver.findElement(By.cssSelector("button[type=\"submit\"]")).click(); //cssselctor can be defined using the mechanism tagName[attributename=attributeValue]
 
 
         WebElement ResultPage = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.id("serp")));
