@@ -14,7 +14,7 @@ public class WordPressAfterLoginSettingsLinkCheck {
     @Test
     public void checkSettingsLinkAfterLogin() {
         //define apk file location
-        File appDir = new File("/Users/Inexis/IdeaProjects/AppiumDemo/Apps");
+        File appDir = new File("/Users/MyPC/IdeaProjects/AppiumDemo/Apps");
         File app = new File(appDir, "org.wordpress.android-5.6-APK4Fun.com.apk");
 
         //define capabilities
@@ -37,7 +37,7 @@ public class WordPressAfterLoginSettingsLinkCheck {
         AppiumDriver adrv = new AndroidDriver(seleniumGridUrl, capabilities);
         adrv.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //perform the test steps
-        adrv.findElement(By.id("org.wordpress.android:id/nux_username")).sendKeys("shaamildev@gmai.com");
+        adrv.findElement(By.id("org.wordpress.android:id/nux_username")).sendKeys("qadev360@gmail.com");
         adrv.findElement(By.id("org.wordpress.android:id/nux_password")).sendKeys("automation36");
         adrv.findElement(By.id("org.wordpress.android:id/nux_sign_in_button")).click();
         Assert.assertEquals(adrv.findElement(By.id("org.wordpress.android:id/bottomLink_Settings")).getText(), "Settings");
